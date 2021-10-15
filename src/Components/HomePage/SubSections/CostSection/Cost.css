@@ -1,0 +1,108 @@
+.cost-left,.cost-right_costs,.cr-main,.choiceDetails{
+    transition: all 0.7s ease-in-out;
+    transition-duration: 1s;
+    transform:translateX(0%) ;
+}
+.cost-right_costs{
+    background: linear-gradient(to top left, #0083F5, #00BEC3);
+}
+.right-overlay_anim{
+    transform: translateX(-100%);
+}
+.left-overlay_anim{
+    transform: translateX(100%);
+    opacity: 0;
+    z-index: -1;
+}
+
+.cr-main_anim{
+    opacity: 0;
+    transform: translateX(-100%);
+    z-index: -1;
+}
+.cntct-form{
+    transition: all 0.7s ease-in-out;
+    background-color: white;
+    z-index: -1;
+}
+.cntct-form_anim{
+    transform:translateX(100%) ;
+    opacity: 1;
+    z-index: 0;
+}
+.choiceDetails{
+    z-index: -1;
+    transform: translateX(-100%);
+    opacity: 0;
+}
+.choiceDetails_anim{
+    z-index: 10;
+    opacity: 1;
+    transform: translateX(0%);
+}
+/* Mobile Responsiveness */
+.choiceD_resp{
+    background: linear-gradient(to top left, #0083F5, #00BEC3);
+}
+
+
+/* Desining */
+.cl-main p{
+    color: rgb(41, 41, 41);
+    font-weight: lighter;
+}
+.cl-main h5{
+    font-weight: bold;
+}
+.cost-btn{
+    border: 1px solid black;
+    color: black;
+    overflow: auto;
+    float: left;
+}
+.cost-btns-pills button{
+    background-color: transparent;
+    border: 1px solid rgb(43, 43, 43) ;
+    width: 7rem ;
+    color: rgb(43, 43, 43) ;
+    border-radius: 0px ;
+    margin-right: 0.5rem;
+    margin-bottom: 0.5rem;
+    padding: 0.5rem 0rem;
+    transition: all 0.4s ease-in-out;
+}
+.cost-btns-pills button:hover{
+    background: linear-gradient(to top left, #0083F5, #00BEC3);
+    color:white;
+    border: none;
+}
+.checked{
+    background: linear-gradient(to top left, #0083F5, #00BEC3);
+    color:white !important;
+    border: none !important;
+}
+.dp-btn,.btn-submit-cntct{
+    transition: all 0.4s ease-in-out;
+}
+.dp-btn:hover{
+    background-color: transparent;
+}
+.dp-btn:focus{
+    background-color: transparent;
+}
+
+.btn-submit-cntct:hover{
+    color: #00BEC3;
+    border: 1px solid #00BEC3;
+}
+.btn-submit-cntct:focus{
+    color: #00BEC3;
+    border: 1px solid #00BEC3;
+}
+.choice-sub div{
+    width: 300px;
+    justify-content: space-between;
+}
+.choice-sub div p{
+    margin:0px;
+}

@@ -1,0 +1,35 @@
+.intro-main{
+    background: rgb(255,255,255);
+    background: linear-gradient(152deg, rgba(255,255,255,1) 0%, rgba(0,191,216,1) 42%, rgba(0,131,245,1) 100%); 
+    transition: all 0.3s ease-in-out;
+}
+.hero-text{
+    margin-top:5rem !important;
+}
+.hero-text h1{
+    font-size: 3rem;
+    font-weight: 700;
+}
+.hero-text h1 span{
+    font-size: 3.2rem;
+    font-weight: 500;
+}
+.hs-vector_col{
+    transform: translate(9%,-12%) !important;
+}
+
+@media all and (max-width:992px) {
+    .hero-text p{
+        font-size: 0.9rem;
+        padding: 0rem 2rem;
+    }
+    .hero-text{
+        text-align: center;
+    }
+    .hs-vector_col{
+        transform: translate(0%) !important;
+    }
+    .hs-vector_col img{
+        width: 100%;
+    }
+}

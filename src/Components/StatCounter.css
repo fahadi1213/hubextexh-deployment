@@ -1,0 +1,15 @@
+.section_counter_body {
+  width: 100%;
+  padding: 5rem 0rem;
+  background-image: linear-gradient(to right, #0083f5, #00bec3);
+}
+.section_counter {
+  text-align: center;
+}
+.counter_numbers {
+  font-size: xx-large;
+  font-weight: bolder;
+}
+.text {
+  color: black;
+}

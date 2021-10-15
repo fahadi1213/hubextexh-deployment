@@ -1,0 +1,16 @@
+@font-face {
+  font-family: yaldevi;
+  src: url(./fonts/Yaldevi-VariableFont_wght.ttf);
+}
+body{
+  font-family: yaldevi !important;
+
+}
+@media all and (min-width:1440px) {
+    .myContainer{
+        width: 100%;
+        max-width: 1320px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+}

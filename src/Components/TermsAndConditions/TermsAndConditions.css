@@ -1,0 +1,12 @@
+.termsandconditions_section {
+    margin-top: 70px;
+    text-align: justify;
+  }
+  .termsandconditions_link {
+    text-decoration: none;
+    color: #212529;
+  }
+  .termsandconditions_link:hover {
+    color: #00bfd8;
+  }
+  

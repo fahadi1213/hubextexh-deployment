@@ -1,0 +1,25 @@
+.res-skills{
+    border: 1px solid #01B9DA;
+    padding: 5px 12px;
+    background-color: #01B9DA;
+    border-radius: 5px;
+    color: #fff;
+}
+@media all and (min-width: 992px) {
+    .skills {
+      margin-left: 400px;
+    }
+    .res-skills{
+        border: 1px solid #01B9DA;
+        padding: 5px 12px;
+        background-color: #01B9DA;
+        border-radius: 5px;
+    }
+    .res-skills:hover{
+        color: black;
+        background-color: #fff
+    }
+    .skills_style{
+        width: 90%;
+    }
+}
