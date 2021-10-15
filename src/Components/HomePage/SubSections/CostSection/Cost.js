@@ -135,8 +135,8 @@ const Cost = () => {
                         <Col md={6} className="p-0 position-relative bg-white">
                             <div className="cost-left container p-5 d-flex justify-content-center  h-100" ref={cp} >
                                 <div className="cl-main" >
-                                    <div className="mt-4 mb-5">
-                                        <h1>Cost Per Unit</h1>
+                                    <div className="mt-4 mb-5 res-cost-heading">
+                                        <h1>Cost Per Dev</h1>
                                         <p>Specify your requirements to a potential candidate to see the average rate</p>
                                     </div>
                                     <div className="cost-btns-pills" onClick={costChangeHandler}>
@@ -181,7 +181,7 @@ const Cost = () => {
                                 <div className="cr-main d-flex flex-column justify-content-center" ref={crMain}>
                                     <p>Average rate per employee</p>
                                     <h1 className="display-1 fw-bold my-5">${`${totalPricePerPers}`}</h1>
-                                    <EButton bgColor="#FFFF" primary onClick={overlay} className="dp-btn">Discuss Partnership</EButton>
+                                    <EButton bgColor="#FFFF" primary onClick={overlay} className="dp-btn" >Discuss Partnership</EButton>
                                 </div>
                             </div>
                         </Col>

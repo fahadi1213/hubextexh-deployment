@@ -2,6 +2,7 @@ import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import "./About.css";
 import aboutprofile from "../../../Images/hamza.jpg";
+// import placeholder from "../../../Images/placeholder.jpg";
 
 function About() {
     return (
@@ -18,7 +19,8 @@ function About() {
                 </div>
                 <Row>
                     <Col className="col-12 col-lg-4 h-100 d-flex justify-content-center mb-4">
-                        {/* <img src={aboutprofile} className="img-fluid" alt="" /> */}
+                        <img src={aboutprofile} className="img-fluid" alt="" 
+                        />
                     </Col>
                     <Col className="col-12 col-lg-7 pt-4 pt-lg-0 content">
                         <h3 className="mb-4">Full Stack Developer</h3>

@@ -27,8 +27,10 @@ const ContactForm = () => {
         <>
         <form onSubmit = {contactDetailsHandler}>
             <div>
-                <h1>Discuss Partnership</h1>
-                <p>Don't hesitate to give us a call or send us a contact form message.</p>
+                <div className="res-cost-heading">
+                    <h1>Discuss Partnership</h1>
+                    <p>Don't hesitate to give us a call or send us a contact form message.</p>
+                </div>
                 <div>
                     <input className="form-control cntct-input my-2" name="exampleName" type="text" placeholder="Enter your name" aria-label="default input example" required onChange = {contactInputsChangeHandler}/>
                     <input className="form-control cntct-input my-2" name="exampleEmail" type="text" placeholder="Enter your email" aria-label="default input example" required onChange = {contactInputsChangeHandler}/>

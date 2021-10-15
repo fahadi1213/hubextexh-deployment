@@ -31,7 +31,29 @@
   color: #fff;
   text-decoration: none;
 }
-
+.side-nav-links-main{
+    position: relative;
+    margin: 0px 8px;
+    text-align: center;
+    color: rgb(255, 255, 255) !important;
+    font-weight: 500;
+    text-decoration: none;
+    transition: all 0.4s ease-in-out;
+}
+.side-nav-links-main:before{
+    content: '';
+    position: absolute;
+    bottom: -5%;
+    height: 4px;
+    width: 0%;
+    background: rgb(255, 255, 255);
+    border-radius: 12px;
+    transition: 0.4s;
+}
+.side-nav-active-main{
+    color: rgb(194, 3, 3) !important;
+    font-weight: bolder !important;
+}
 @media (max-width: 1199px) {
   .header {
     left: -300px;

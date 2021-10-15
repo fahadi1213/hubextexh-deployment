@@ -1,5 +1,5 @@
 .footer-section {
-  background: #22241f;
+  background-color: #1B1B1B;
   position: relative;
 }
 .footer-content {
@@ -146,6 +146,19 @@
     font-size: small;
 }
 }
+@media all and (min-width: 567px) and (max-width: 991px) {
+    .res-input {
+      width: 75% !important;
+    }
+    .git-form button {
+      position: absolute;
+      right: 21%;
+      background: #00bfd8;
+      padding: 14px 20px;
+      border: 1px solid #00bfd8;
+      top: 0;
+    }
+  }
 @media all and (min-width: 992px) {
   .res-input {
     width: 75% !important;

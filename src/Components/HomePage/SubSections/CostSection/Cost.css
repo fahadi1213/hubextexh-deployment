@@ -69,7 +69,6 @@
     margin-right: 0.5rem;
     margin-bottom: 0.5rem;
     padding: 0.5rem 0rem;
-    transition: all 0.4s ease-in-out;
 }
 .cost-btns-pills button:hover{
     background: linear-gradient(to top left, #0083F5, #00BEC3);
@@ -79,7 +78,7 @@
 .checked{
     background: linear-gradient(to top left, #0083F5, #00BEC3);
     color:white !important;
-    border: none !important;
+    border: 1px solid #00BEC3 !important;
 }
 .dp-btn,.btn-submit-cntct{
     transition: all 0.4s ease-in-out;
@@ -105,4 +104,9 @@
 }
 .choice-sub div p{
     margin:0px;
+}
+@media all and  (max-width: 567px) {
+    .res-cost-heading{
+        text-align: center;
+    }
 }

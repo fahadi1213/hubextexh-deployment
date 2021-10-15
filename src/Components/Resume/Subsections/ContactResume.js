@@ -13,7 +13,25 @@ function ContactResume() {
                     <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
                 </div>
                 <Row className="contact_style">
-                    <Col className="col-12 col-xl-5 d-flex align-items-stretch">
+                    <Col className="col-12 col-xl-7 mt-5 mt-lg-0 d-flex align-items-center">
+                        <div className="info">
+                            <div className="address text-center mb-3">
+                                <h4>Contact Us</h4>
+                                <p className="p-0">Don't hesitate to send us a contact message.</p>
+                            </div>
+                            <div>
+                                <input className="form-control cntct-input my-2" type="text" placeholder="Enter your name" aria-label="default input example" />
+                                <input className="form-control cntct-input my-2" type="text" placeholder="Enter your email" aria-label="default input example" />
+                                <div className="mb-3">
+                                    <textarea className="form-control" id="exampleFormControlTextarea1" placeholder="Your message" rows="3"></textarea>
+                                </div>
+                            </div>
+                            <div className="text-center">
+                                <EButton width="10rem" primary bgColor="#01B9DA" color="white" className="dp-btn btn-submit-cntct  my-5">Send Message</EButton>
+                            </div>
+                        </div>
+                    </Col>
+                    <Col className="col-12 col-xl-5 d-flex">
                         <div className="info">
                             <div className="address res-div-style text-center mb-3">
                                 <h4>Find Us</h4>
@@ -55,24 +73,6 @@ function ContactResume() {
                                         </a>
                                     </li>
                                 </ul>
-                            </div>
-                        </div>
-                    </Col>
-                    <Col className="col-12 col-xl-7 mt-5 mt-lg-0 d-flex align-items-center">
-                        <div className="info">
-                            <div className="address text-center mb-3">
-                                <h4>Contact Information</h4>
-                                <p className="p-0">Don't hesitate to send us a contact message.</p>
-                            </div>
-                            <div>
-                                <input className="form-control cntct-input my-2" type="text" placeholder="Enter your name" aria-label="default input example" />
-                                <input className="form-control cntct-input my-2" type="text" placeholder="Enter your email" aria-label="default input example" />
-                                <div className="mb-3">
-                                    <textarea className="form-control" id="exampleFormControlTextarea1" placeholder="Your message" rows="3"></textarea>
-                                </div>
-                            </div>
-                            <div className="text-center">
-                                <EButton width="10rem" primary bgColor="#01B9DA" color="white" className="dp-btn btn-submit-cntct  my-5">Send Message</EButton>
                             </div>
                         </div>
                     </Col>

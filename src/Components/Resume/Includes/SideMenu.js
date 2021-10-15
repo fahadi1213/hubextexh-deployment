@@ -5,6 +5,13 @@ import profile from "../../../Images/hamza.jpg";
 import ResumeFooter from "./ResumeFooter";
 
 function SideMenu() {
+
+    const scrollIntoViewHandler = (id) => {
+         
+        const anchor = document.getElementById(id);
+        const yOffset = -500;
+        const y = anchor.getBoundingClientRect().top + window.pageYOffset + yOffset; anchor.scrollIntoView({ behavior: "smooth", top: y })
+    }
   return (
     <>
         <section>
@@ -18,25 +25,25 @@ function SideMenu() {
                     <nav id="side-navbar" className="nav-menu navbar sideNavbar">
                         <ul>
                             <li>
-                                <Nav.Link onClick={() =>{ const anchor = document.getElementById('resume-home'); const yOffset = -500; const y = anchor.getBoundingClientRect().top + window.pageYOffset + yOffset; anchor.scrollIntoView({behavior:"smooth",top:y})}}>
+                                <Nav.Link className="side-nav-links-main resume-home" onClick={() => scrollIntoViewHandler('resume-home')}>
                                     <i className="fas fa-home"></i>
                                     <span className="sp">&nbsp; HOME </span>
                                 </Nav.Link>
                             </li>
                             <li>
-                                <Nav.Link onClick={() =>{ const anchor = document.getElementById('resume-about'); const yOffset = -500; const y = anchor.getBoundingClientRect().top + window.pageYOffset + yOffset; anchor.scrollIntoView({behavior:"smooth",top:y})}}>
+                                <Nav.Link className="side-nav-links-main resume-about" onClick={() => scrollIntoViewHandler('resume-about')}>
                                     <i className="fas fa-user"></i>
                                     <span>&nbsp; ABOUT </span>
                                 </Nav.Link>
                             </li>
                             <li>
-                                <Nav.Link onClick={() =>{ const anchor = document.getElementById('resume-nav'); const yOffset = -500; const y = anchor.getBoundingClientRect().top + window.pageYOffset + yOffset; anchor.scrollIntoView({behavior:"smooth",top:y})}}>
+                                <Nav.Link className="side-nav-links-main resume-nav" onClick={() => scrollIntoViewHandler('resume-nav')}>
                                     <i className="fas fa-file"></i>
                                     <span>&nbsp; RESUME </span>
                                 </Nav.Link>
                             </li>
                             <li>
-                                <Nav.Link onClick={() =>{ const anchor = document.getElementById('resume-contact'); const yOffset = -500; const y = anchor.getBoundingClientRect().top + window.pageYOffset + yOffset; anchor.scrollIntoView({behavior:"smooth",top:y})}}>
+                                <Nav.Link className="side-nav-links-main resume-contact" onClick={() => scrollIntoViewHandler('resume-contact')}>
                                     <i className="fas fa-envelope"></i>
                                     <span>&nbsp; CONTACT </span>
                                 </Nav.Link>
