@@ -146,3 +146,9 @@ li a{
     transition: all 0.5s ease-in-out;
     height: 65px;
 }
+
+@media all and (max-width:576px) {
+    .navbar-main{
+        padding: 1rem 0rem !important;
+    }
+}

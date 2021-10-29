@@ -4,7 +4,7 @@ import "./ResumeFooter.css"
 
 function ResumeFooter() {
     return (
-        <footer className="footer">
+        <footer className="footer-sideMenu">
             <Container>
                 <div className="copyright">
                     <p className="p_style_res">

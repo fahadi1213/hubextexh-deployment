@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
-import EButton from '../../../UI/Button'
+import EButton from '../../../UI/Button';
 
-const ContactForm = () => {
+const ContactForm = (props) => {
+
     const [cntctData,setCntctData] = useState({
         exampleName:'',
         exampleEmail:'',
@@ -16,12 +17,14 @@ const ContactForm = () => {
                 [keyName]:keyValue
             }
         })
+        props.ContactFormData(cntctData)
 
     }
 
     const contactDetailsHandler = (e) =>{
         e.preventDefault();
-        console.log(cntctData)
+        props.ContactFormSubmitCallHandler();
+
     }
     return (
         <>

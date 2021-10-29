@@ -13,7 +13,7 @@ const ServicesResp = (props) => {
                         <div className="d-flex justify-content-center">
                             <hr style={{border:"2px solid white", width:'60%', backgroundColor:"white"}}/>
                         </div>
-                        <Card.Text className="text-white fw-lighter ">
+                        <Card.Text>
                         {props.Desc}
                         </Card.Text>
                     </Card.Body>

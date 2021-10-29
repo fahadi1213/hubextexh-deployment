@@ -32,17 +32,17 @@ function ContactUs() {
                                     <div className="footer-contact-heading">
                                         <h3>Find Us</h3>
                                     </div>
-                                    <ul className="p-0 footer_section_a text-start">
+                                    <ul className="p-0 res-contact-address footer_section_a text-start">
                                         <li className="text-center">
                                             <a href="https://www.google.com/maps/place/4+Riverina+Blvd,+Brookfield+VIC+3338,+Australia/@-37.708397,144.545497,16z/data=!4m5!3m4!1s0x6ad693151396b1df:0xfaf6c1c475e03ae2!8m2!3d-37.7083967!4d144.545497?hl=en">
                                                 <i className="fas fa-map-marker-alt me-2"></i>
-                                                4 Riverina boulevard, Brookfield 3338,<br /> Melbourne, Australia.
+                                                4 Riverina boulevard, Brookfield 3338, Melbourne, Australia.
                                             </a>
                                         </li>
                                         <li className="text-center">
                                             <a href="https://www.google.com/maps/place/Southville+Solutions/@31.4579162,74.2738551,17z/data=!3m1!4b1!4m5!3m4!1s0x391901ed6dd6c28f:0x431c3944dd59341c!8m2!3d31.4625077!4d74.2765154">
                                                 <i className="fas fa-map-marker-alt me-2"></i>
-                                                85 Service Rd, Block R1, Phase 2, Johar <br />Town, Lahore, Punjab, Pakistan.
+                                                85 Service Rd, Block R1, Phase 2, Johar Town, Lahore, Punjab, Pakistan.
                                             </a>
                                         </li>
                                     </ul>

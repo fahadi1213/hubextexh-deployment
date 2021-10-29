@@ -1,0 +1,56 @@
+.loader-main {
+    background-color: white;
+    height: 100vh;
+    transform: translateX(-10%);
+}
+.loader span {
+  display: block;
+  position: absolute;
+  font-size: 3.3rem;
+  color: black;
+  font-weight: 500;
+  opacity: 0;
+  transform: translateY(100%);
+  animation: count 3s;
+}
+.loader span:nth-child(1) {
+  animation-delay: 0s;
+}
+.loader span:nth-child(2) {
+  animation-delay: 0.7s;
+}
+
+.loader span:nth-child(3) {
+  animation-delay: 1.4s;
+}
+
+.loader span:nth-child(4) {
+  animation-delay: 2.1s;
+}
+
+.loader span:nth-child(5) {
+  animation-delay: 2.8s;
+}
+
+.loader span:nth-child(6) {
+  animation-delay: 3.5s;
+}
+
+.loader span:nth-child(7) {
+  animation-delay: 4.2s;
+}
+
+@keyframes count {
+  0% {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  12% {
+    opacity: 1;
+    transform: translateY(-50%);
+  }
+  16%{
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+}

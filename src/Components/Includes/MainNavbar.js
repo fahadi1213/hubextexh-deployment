@@ -7,34 +7,32 @@ import './MainNavbar.css';
 //Font Awesome Icons
 
 const MainNavbar = () => {
-    let navlinks = null
-    let sections = null;
-   const callBackFunction = () => {
-        //On Scroll changing the navlinks activeness
-        navlinks = document.querySelectorAll('.nav-links-main');
-        sections = document.querySelectorAll('.navlinks-section')
 
-    }
-    callBackFunction();
     //Handler 
-    const navlinksActiveHandler = () =>{
+    const navlinksActiveHandler = () => {
+        let navlinks =  document.querySelectorAll('.nav-links-main');
+        let sections  = document.querySelectorAll('.navlinks-section')
         let current = '';
-        sections.forEach(section =>{
+
+
+        sections.forEach(section => {
+
             const sectionTop = section.offsetTop - 100;
-            if(window.pageYOffset >= sectionTop){
+            if (window.pageYOffset >= sectionTop) {
                 current = section.getAttribute('id');
             }
+
         });
 
-        navlinks.forEach((navlink) =>{
+        navlinks.forEach((navlink) => {
             navlink.classList.remove('active-main');
-            if(navlink.classList.contains(current)){
+            if (navlink.classList.contains(current)) {
                 navlink.classList.add('active-main')
 
             }
         })
     }
-    window.addEventListener('scroll',navlinksActiveHandler);
+    window.addEventListener('scroll', navlinksActiveHandler);
     const sideOverlay = useRef(null);
     const openSidebar = () => {
         sideOverlay.current.style.transform = 'translateX(0%)';
@@ -44,11 +42,11 @@ const MainNavbar = () => {
     }
     //Sticky Navbar]
     const handleScroll = () => {
-        if (window.scrollY > 0) {
-            setNavClasses('py-2 navbar-main position-fixed top-0 nav-bg w-100')
+        if (window.scrollY > 500) {
+            setNavClasses('navbar-main position-fixed top-0 nav-bg w-100')
         }
         else {
-            setNavClasses('py-2 navbar-main')
+            setNavClasses('navbar-main')
         }
     }
     const scrollIntoViewHandler = (id) => {
@@ -58,7 +56,8 @@ const MainNavbar = () => {
         closeSideBar();
         const anchor = document.getElementById(id);
         const yOffset = -500;
-        const y = anchor.getBoundingClientRect().top + window.pageYOffset + yOffset; anchor.scrollIntoView({ behavior: "smooth", top: y })
+        const y = anchor.getBoundingClientRect().top + window.pageYOffset + yOffset; 
+        anchor.scrollIntoView({ behavior: "smooth", top: y })
     }
     const [navClasses, setNavClasses] = useState('py-4 navbar-main');
     window.addEventListener('scroll', handleScroll)
@@ -72,7 +71,9 @@ const MainNavbar = () => {
         <div className="sticky">
             <Navbar expand="lg" className={navClasses} >
                 <Container>
-                    <a href="#/" className="w-50"><img src={HubexLogo} className="img-fluid" width="180px" alt="logo" /></a>
+                    <div className="w-50">
+                        <a href="https://www.hubextech.com/"><img src={HubexLogo} className="img-fluid" width="180px" alt="logo" /></a>
+                    </div>
                     <button className="bg-transparent border-0 nav-menu-btn d-lg-none" onClick={openSidebar}>
                         <i className="fas fa-bars nav-menu_icon fs-3"></i>
                     </button>
@@ -88,7 +89,7 @@ const MainNavbar = () => {
                             <Nav.Link className="nav-links-main costNav-main" onClick={() => scrollIntoViewHandler('costNav-main')} >Request</Nav.Link>
                             <Nav.Link className="nav-links-main projNav-main" onClick={() => scrollIntoViewHandler('projNav-main')} >Portfolio</Nav.Link>
                             <Nav.Link className="nav-links-main cntctNav-main" onClick={() => scrollIntoViewHandler('cntctNav-main')} >Contact</Nav.Link>
-                            <Nav.Link className="nav-links-main ">Careers</Nav.Link>
+
                         </Nav>
                         <EButton width="8rem" bgColor="#01B9DA" primary color="white" className="mx-2 gt-btn" onClick={() => scrollIntoViewHandler('footerNav')}>Get in Touch</EButton>
                     </Navbar.Collapse>
@@ -105,9 +106,9 @@ const MainNavbar = () => {
                 </div>
                 <div className="p-5 so-main">
                     <div className="so-list d-flex flex-column">
-                        <span><Nav.Link onClick = {() => scrollIntoViewHandler('homeNav')} className="side-navLinks">Home</Nav.Link></span>
-                        <span><Nav.Link onClick = {() => scrollIntoViewHandler('servicesNav-main')} className="side-navLinks">Services</Nav.Link></span>
-                        <span><Nav.Link onClick = {() => scrollIntoViewHandler('servicesNav-main')} className="side-navLinks">Careers </Nav.Link></span>
+                        <span><Nav.Link onClick={() => scrollIntoViewHandler('homeNav')} className="side-navLinks">Home</Nav.Link></span>
+                        <span><Nav.Link onClick={() => scrollIntoViewHandler('servicesNav-main')} className="side-navLinks">Services</Nav.Link></span>
+                        <span><Nav.Link onClick={() => scrollIntoViewHandler('servicesNav-main')} className="side-navLinks">Careers </Nav.Link></span>
                     </div>
                     <p className="ms-4 mt-5">It's not just what it looks like and <br />feel like. Design is how it works.</p>
                     <p className="text-start mt-3 ms-4 fw-bolder text-uppercase">Steve Jobs</p>

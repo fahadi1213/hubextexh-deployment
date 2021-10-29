@@ -1,92 +1,79 @@
-import React from "react";
+import React, { useState } from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import "./About.css";
-import aboutprofile from "../../../Images/hamza.jpg";
-// import placeholder from "../../../Images/placeholder.jpg";
 
-function About() {
+import "./About.css";
+import placeHolder from '../../../Images/placeholder.jpg'
+
+function About(props) {
+
+    const aboutRespData = props.AboutRespData;
+
+    //When the Enity Image is not present we call the following statement to replace the empty space with a dumy image.
+    const [replaceAbleImage,setReplaceAbleImage] = useState(aboutRespData.picture);
+    const onErrorHandler = () =>{
+        setReplaceAbleImage(placeHolder);
+    }
+    !(replaceAbleImage) && onErrorHandler();
+    
     return (
-        <section id="resume-about" className="about res-section">
+        <section id="resume-about" className="side-nav-links-section about res-section">
             <Container>
                 <div className="section-title mb-4">
                     <h2>About</h2>
                     <p>
-                        Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex
-                        aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos
-                        quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia
-                        fugiat sit in iste officiis commodi quidem hic quas.
+                        {aboutRespData.details}
                     </p>
                 </div>
                 <Row>
                     <Col className="col-12 col-lg-4 h-100 d-flex justify-content-center mb-4">
-                        <img src={aboutprofile} className="img-fluid" alt="" 
+                        <img src={replaceAbleImage}  className="img-fluid" alt="" 
                         />
                     </Col>
-                    <Col className="col-12 col-lg-7 pt-4 pt-lg-0 content">
-                        <h3 className="mb-4">Full Stack Developer</h3>
+                    <Col className="col-12 col-lg-8 pt-4 pt-lg-0 content">
+                        <h3 className="mb-4">{aboutRespData.title}</h3>
                         <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                            eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                            {aboutRespData.description}
                         </p>
-                        <Row className="icons">
+                        <Row className="icons p-0">
                             <Col className="col-lg-6">
                                 <ul>
                                     <li>
-                                        <i className="far fa-angle-right"></i>
+                                        <i className="fas fa-chevron-right"></i>&nbsp;
                                         <strong>Birthday:</strong>
-                                        <span>1 May 1996</span>
+                                        <span>{aboutRespData.birthday_date}</span>
                                     </li>
                                     <li>
-                                        <i className="fad fa-chevron-right"></i>
-                                        <strong>Website:</strong>
-                                        <span>hamza@github.com</span>
-                                    </li>
-                                    <li>
-                                        <i className="fad fa-chevron-right"></i>
-                                        <strong>Phone:</strong>
-                                        <span>+92 303 456 7890</span>
-                                    </li>
-                                    <li>
-                                        <i className="fad fa-chevron-right"></i>
+                                        <i className="fas fa-chevron-right"></i>&nbsp;
                                         <strong>City:</strong>
-                                        <span>Lahore, Pakistan</span>
+                                        <span>{aboutRespData.city}</span>
+                                    </li>
+                                    <li>
+                                        <i className="fas fa-chevron-right"></i>&nbsp;
+                                        <strong>Phone:</strong>
+                                        <span>{aboutRespData.phone_number}</span>
                                     </li>
                                 </ul>
                             </Col>
                             <Col className="col-lg-6">
                                 <ul>
                                     <li>
-                                        <i className="fad fa-chevron-right"></i>
+                                        <i className="fas fa-chevron-right"></i>&nbsp;
                                         <strong>Age:</strong>
-                                        <span>25</span>
+                                        <span>{aboutRespData.age}</span>
                                         </li>
                                     <li>
-                                        <i className="far fa-chevron-right"></i>
+                                        <i className="fas fa-chevron-right"></i>&nbsp;
                                         <strong>Degree:</strong>
-                                        <span>Graduated</span>
+                                        <span>{aboutRespData.degree}</span>
                                         </li>
                                     <li>
-                                        <i className="far fa-chevron-right"></i>
+                                        <i className="fas fa-chevron-right"></i>&nbsp;
                                         <strong>Email:</strong>
-                                        <span>hamza@gmail.com</span>
-                                        </li>
-                                    <li>
-                                        <i className="far fa-chevron-right"></i>
-                                        <strong>Freelance:</strong>
-                                        <span>Available</span>
+                                        <span>{aboutRespData.email}</span>
                                     </li>
                                 </ul>
                             </Col>
                         </Row>
-                        <p>
-                        Officiis eligendi itaque labore et dolorum mollitia officiis optio
-                        vero. Quisquam sunt adipisci omnis et ut. Nulla accusantium dolor
-                        incidunt officia tempore. Et eius omnis. Cupiditate ut dicta
-                        maxime officiis quidem quia. Sed et consectetur qui quia
-                        repellendus itaque neque. Aliquid amet quidem ut quaerat
-                        cupiditate. Ab et eum qui repellendus omnis culpa magni laudantium
-                        dolores.
-                        </p>
                     </Col>
                 </Row>
             </Container>

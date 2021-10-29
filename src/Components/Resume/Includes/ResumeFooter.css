@@ -1,32 +1,31 @@
+.footer-sideMenu {
+    width: 100% !important;
+}
 @media all and (min-width: 992px) {
-  .footer {
+  .footer-sideMenu {
     color: #f4f6fd;
     font-size: 14px;
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 300px;
-    z-index: 15;
+    width: inherit;
     background: #1B1B1B;
     padding: 5px;
   }
-  .footer .copyright {
+  .footer-sideMenu .copyright {
     text-align: center;
   }
   .p_style_res {
     margin-top: 15px;
   }
-  .footer .copyright a {
+  .footer-sideMenu .copyright a {
     text-decoration: none;
     color: #01b9da;
   }
-  .footer .copyright a:hover {
+  .footer-sideMenu .copyright a:hover {
     text-decoration: none;
     color: #f4f6fd;
   }
 }
 @media all and (max-width: 990px) {
-    .footer {
+    .footer-sideMenu {
         display: none;
     }
   }

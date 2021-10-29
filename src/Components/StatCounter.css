@@ -1,7 +1,9 @@
 .section_counter_body {
   width: 100%;
   padding: 5rem 0rem;
-  background-image: linear-gradient(to right, #0083f5, #00bec3);
+  /* background: linear-gradient(to top left, #0083F5, #00BEC3); */
+  background: rgb(0,131,245);
+  background: linear-gradient(170deg, rgba(0,190,195,1) 20%, rgba(0,131,245,1) 100%);
 }
 .section_counter {
   text-align: center;

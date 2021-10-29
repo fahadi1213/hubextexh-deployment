@@ -2,6 +2,7 @@ import React from 'react';
 import './Services.css'
 import { Container, Row} from 'react-bootstrap';
 // Images
+
 import mobDev from '../../../Images/Mobile-development-pana.png'
 import webDev from '../../../Images/Developer-activity-pana.png'
 import softDev from '../../../Images/Programming-pana.png'
@@ -20,7 +21,7 @@ const Services = () => {
                 <Container>
                     <div className="text-center">
                         {/* <h5 className="p-0 serv-topText">Our Services</h5> */}
-                        <h1 className="fw-bold text-white">Customize Your Experience</h1>
+                        <h1 className="fw-bold">Customize Your Experience</h1>
                         <p className="fs-5 text-center text-secondary">We aim to build technology assets for you. </p>
                     </div>
                     <div className="d-none d-xl-block">
@@ -37,7 +38,7 @@ const Services = () => {
                         <Row className = "justify-content-center">
                             {
                                 myData.map((curr,index) =>{
-                                    return <ServicesResp Title = {curr.title} imageSrc = {curr.src} Desc = {curr.des}/>
+                                    return <ServicesResp key = {index} Title = {curr.title} imageSrc = {curr.src} Desc = {curr.des}/>
                                 })
                             }
                         </Row>

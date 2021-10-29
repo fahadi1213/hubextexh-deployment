@@ -1,0 +1,63 @@
+.footer-pdet-main {
+  background-color: #1b1b1b;
+  height: 100 !important;
+}
+.footer-pdet-logo {
+  margin-top: 0px;
+}
+.footer-pdet-logo img {
+  max-width: 200px;
+}
+.pdet-footer-p {
+  font-size: 16px;
+}
+.footer-pdet-links a {
+  font-size: 16px;
+  color: #7e7e7e;
+  text-decoration: none;
+}
+.footer-pdet-links a:hover {
+  color: #00bfd8;
+}
+.footer-contact-us-heading h3 {
+  color: #fff;
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 40px;
+  position: relative;
+}
+.footer-contact-us-heading h3::before {
+  content: "";
+  position: absolute;
+  align-items: center;
+  justify-content: center;
+  bottom: -15px;
+  height: 2px;
+  width: 50px;
+  background: #00bfd8;
+}
+@media all and (max-width: 767px) {
+  .footer-pdet-main {
+    text-align: center !important;
+  }
+  .pdet-media-icons {
+    justify-content: center;
+  }
+  .footer-contact-us-heading h3 {
+    color: #fff;
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 40px;
+    position: relative;
+  }
+  .footer-contact-us-heading h3::before {
+    content: "";
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+    bottom: -15px;
+    height: 2px;
+    width: 50px;
+    background: #00bfd8;
+  }
+}

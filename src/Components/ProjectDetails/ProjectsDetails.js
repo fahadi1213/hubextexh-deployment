@@ -5,7 +5,7 @@ import pDImage2 from '../../Images/1.jpg';
 import pDImage3 from '../../Images/2.jpg';
 import pDImage4 from '../../Images/2.jpg';
 import "./ProjectsDetails.css"
-import Footer from "../Includes/Footer"
+import ProjectDetailFooter from './ProjectDetailFooter';
 
 
 function ProjectsDetails() {
@@ -24,7 +24,7 @@ function ProjectsDetails() {
                     VOICE RULES
                 </h1>
                 <Row className="justify-content-between">
-                    <Col className="col-12 col-md-2 pdet-section-info">
+                    <Col className="col-6 col-md-2 pdet-section-info">
                         <h6>
                             Company
                         </h6>
@@ -32,7 +32,7 @@ function ProjectsDetails() {
                             Voicerules
                         </p>
                     </Col>
-                    <Col className="col-12 col-md-2 pdet-section-info">
+                    <Col className="col-6 col-md-2 pdet-section-info">
                         <h6>
                             Industry
                         </h6>
@@ -40,7 +40,7 @@ function ProjectsDetails() {
                             International Calling Company
                         </p>
                     </Col>
-                    <Col className="col-12 col-md-2 pdet-section-info">
+                    <Col className="col-6 col-md-2 pdet-section-info">
                         <h6>
                             Technologies
                         </h6>
@@ -48,7 +48,7 @@ function ProjectsDetails() {
                             CSS, HTML, JSON, JAVA.
                         </p>
                     </Col>
-                    <Col className="col-12 col-md-2 pdet-section-info">
+                    <Col className="col-6 col-md-2 pdet-section-info">
                         <h6>
                             Website
                         </h6>
@@ -63,7 +63,7 @@ function ProjectsDetails() {
                     </Col>
                 </Row>
                 <Row className="p-0 text-start">
-                    <Col className="col-12 col-lg-6 pdet-section-content">
+                    <Col className="col-12 col-xl-6 pdet-section-content">
                         <p>
                             VoiceRules is any device, anytime, anywhere phone system for your
                             sales and support teams. It takes seconds to get phone numbers in
@@ -72,7 +72,7 @@ function ProjectsDetails() {
                             available for all phone numbers.
                         </p>
                     </Col>
-                    <Col className="col-12 col-lg-6 pdet-section-content">
+                    <Col className="col-12 col-xl-6 pdet-section-content">
                         <p>
                             We believe to give full control and power to our customers for their
                             phone system. No contract. No upfront cost. No software or hardware
@@ -85,15 +85,15 @@ function ProjectsDetails() {
                     {
                         projectsData.map((curr,index) =>{
                             return (
-                                <Col className="col-12 col-lg-6 justify-content-center align-items-center">
-                                    <img width="100%" className="pdet-section-img-sub" key={index} src={curr.imageSrc} alt="project-details"/>
+                                <Col className="col-12 col-xl-6 justify-content-center align-items-center" key={index}>
+                                    <img width="100%" className="pdet-section-img-sub" src={curr.imageSrc} alt="project-details"/>
                                 </Col>
                             )
                         })
                     }
                 </Row>
             </Container>
-                <section className="testimonial text-center navlinks-section" id= 'test-offset'>
+                <section className="testimonial text-center navlinks-section">
                     <div className="heading white-heading">Testimonial</div>
                     <div className="carousel-inner">
                         <div className="testimonial_slide">
@@ -113,7 +113,7 @@ function ProjectsDetails() {
                         </div>
                     </div>
                 </section>
-            <Footer />
+            <ProjectDetailFooter />
         </section>
     )
 }

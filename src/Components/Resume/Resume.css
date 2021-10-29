@@ -1,14 +1,16 @@
 .res-section {
-  padding: 60px 0;
+  padding: 60px 100px;
   overflow: hidden;
 }
-
+@media all and (max-width: 767px) {
+    .res-section {
+        padding: 60px 0;
+    }
+}
 .section-bg {
   background: #f5f8fd;
 }
-
 .section-title {
-  max-width: 90%;
   padding-bottom: 30px;
 }
 .section-title h2 {
@@ -17,7 +19,7 @@
   margin-bottom: 20px;
   padding-bottom: 20px;
   position: relative;
-  color: #01B9DA;
+  color: #01b9da;
 }
 .section-title h2::after {
   content: "";
@@ -32,8 +34,9 @@
 .section-title p {
   margin-bottom: 0;
 }
-@media all and (max-width: 990px) {
-    .section-title {
-        max-width: 100%;
-    }
+
+@media all and (max-width: 1199px) {
+  .section-title {
+    max-width: 100%;
+  }
 }

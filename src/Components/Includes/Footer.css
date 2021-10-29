@@ -122,7 +122,7 @@
   border-radius: 50%;
   text-align: center;
   line-height: 40px;
-  color: #fff;
+  color: #fff !important;
   font-size: 17px;
   text-decoration: none;
   transition: all 0.4s ease;
@@ -131,20 +131,15 @@
   background: #1da1f2;
 }
 .media-icons a:nth-child(1):hover {
-  color: #1da1f2;
+  color: #1da1f2 !important;
   background: #fff;
 }
 .media-icons a:nth-child(2) {
   background: #0077b5;
 }
 .media-icons a:nth-child(2):hover {
-  color: #0077b5;
+  color: #0077b5 !important;
   background: #fff;
-}
-@media all and (max-width: 376px) {
-.footer-nav{
-    font-size: small;
-}
 }
 @media all and (min-width: 567px) and (max-width: 991px) {
     .res-input {

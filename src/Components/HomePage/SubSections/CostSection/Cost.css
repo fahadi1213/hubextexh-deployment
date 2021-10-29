@@ -1,3 +1,4 @@
+
 .cost-left,.cost-right_costs,.cr-main,.choiceDetails{
     transition: all 0.7s ease-in-out;
     transition-duration: 1s;
@@ -5,6 +6,9 @@
 }
 .cost-right_costs{
     background: linear-gradient(to top left, #0083F5, #00BEC3);
+}
+.cost-left{
+    padding: 4rem;
 }
 .right-overlay_anim{
     transform: translateX(-100%);
@@ -14,11 +18,10 @@
     opacity: 0;
     z-index: -1;
 }
-
 .cr-main_anim{
-    opacity: 0;
     transform: translateX(-100%);
     z-index: -1;
+    opacity: 0;
 }
 .cntct-form{
     transition: all 0.7s ease-in-out;
@@ -71,9 +74,7 @@
     padding: 0.5rem 0rem;
 }
 .cost-btns-pills button:hover{
-    background: linear-gradient(to top left, #0083F5, #00BEC3);
-    color:white;
-    border: none;
+    border: 1px solid #00BEC3;
 }
 .checked{
     background: linear-gradient(to top left, #0083F5, #00BEC3);
@@ -98,9 +99,11 @@
     color: #00BEC3;
     border: 1px solid #00BEC3;
 }
+
 .choice-sub div{
     width: 300px;
     justify-content: space-between;
+
 }
 .choice-sub div p{
     margin:0px;

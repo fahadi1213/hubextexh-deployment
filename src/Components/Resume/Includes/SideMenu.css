@@ -1,13 +1,19 @@
+@media all and (min-width: 1200px) {
+  .sideMenu-main {
+    width: 25%;
+    height: 100vh;
+  }
+}
 .header {
   position: fixed;
   top: 0;
   left: 0;
   bottom: 0;
-  width: 300px;
+  width: 20%;
+  height: 100%;
   transition: all ease-in-out 0.5s;
   z-index: 4;
   transition: all 0.5s;
-  padding: 0 15px;
   background: #040b14;
   overflow-y: auto;
 }
@@ -24,48 +30,41 @@
   font-weight: 600;
   -moz-text-align-last: center;
   text-align-last: center;
-  font-family: "Poppins", sans-serif;
 }
 .header .profile h1 a,
 .header .profile h1 a:hover {
   color: #fff;
   text-decoration: none;
 }
-.side-nav-links-main{
-    position: relative;
-    margin: 0px 8px;
-    text-align: center;
-    color: rgb(255, 255, 255) !important;
-    font-weight: 500;
-    text-decoration: none;
-    transition: all 0.4s ease-in-out;
+.side-nav-links-main {
+  position: relative;
+  text-align: center;
+  color: rgb(255, 255, 255) !important;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.4s ease-in-out;
 }
-.side-nav-links-main:before{
-    content: '';
-    position: absolute;
-    bottom: -5%;
-    height: 4px;
-    width: 0%;
-    background: rgb(255, 255, 255);
-    border-radius: 12px;
-    transition: 0.4s;
+.side-nav-links-main:before {
+  content: "";
+  position: absolute;
+  bottom: -5%;
+  height: 4px;
+  width: 0%;
+  /* background: rgb(255, 255, 255); */
+  border-radius: 12px;
+  transition: 0.4s;
 }
-.side-nav-active-main{
-    color: rgb(194, 3, 3) !important;
-    font-weight: bolder !important;
-}
-@media (max-width: 1199px) {
-  .header {
-    left: -300px;
-  }
+.side-nav-active {
+  color: rgb(194, 3, 3) !important;
+  font-weight: bolder !important;
 }
 .nav-menu {
   padding: 30px 0 0 0;
 }
 .nav-menu * {
-  margin: 0;
-  padding: 0;
-  list-style: none;
+    justify-content: center;
+    list-style: none;
+    width: 100%;
 }
 .nav-menu > ul > li {
   position: relative;
@@ -128,6 +127,13 @@
 .mobile-nav-active .header {
   left: 0;
 }
-.nav-menu a:focus{
-    color: #01B9DA;
+.nav-menu a:focus {
+  color: #01b9da;
 }
+@media all and (max-width:1199px) {
+    .header{
+        width: 100%;
+        transform: translateX(-100%);
+    }
+}
+

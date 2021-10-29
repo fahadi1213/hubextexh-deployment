@@ -10,7 +10,7 @@ const CostCalculations = (props) => {
     }
     return (
         <>
-            <div className="choice-sub w-100 d-flex flex-column align-items-center" >
+            <div className="choice-sub h-100 w-100 rounded d-flex flex-column align-items-center justify-content-center" >
                 <div className="st-main d-flex align-items-center bg-white rounded px-4 py-3 my-2">
                     <p>Specialist Type :</p>
                     <p>{costData.spType}</p>

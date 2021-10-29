@@ -3,12 +3,15 @@ import './FlipCard.css'
 import { Col, Card } from 'react-bootstrap';
 
 const FlipCard = (props) => {
+
+
+
     return (
         <>
-            <Col xs md={6} lg={4}>
+            <Col xs md={6} lg={4} className="flip-card-col">
                 <div className="cards-wrapper">
                     <div className="card-container">
-                        <Card className="flip-card bg-transparent">
+                        <Card className="flip-card">
                             <div className="card-contents card-front">
                                 <div className="card-depth">
                                     <Card.Img variant="top" src={props.imageSrc} className="border-0 w-75 mb-5" />
@@ -17,7 +20,7 @@ const FlipCard = (props) => {
                             </div>
                             <div className="card-contents card-back">
                                 <div className="card-depth px-4">
-                                    <h2 className="fw-bold text-white mb-5">{props.title}</h2>
+                                    <h2 className="fw-bold mb-5">{props.title}</h2>
                                     <p>{props.description}</p>
                                 </div>
                             </div>

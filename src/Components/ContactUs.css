@@ -51,6 +51,9 @@
   color: #757575;
   font-size: 15px;
 }
+.res-contact-address {
+    max-width: 320px;
+  }
 @media all and (min-width: 992px) {
   .contact-section-bg {
     background-position: center;

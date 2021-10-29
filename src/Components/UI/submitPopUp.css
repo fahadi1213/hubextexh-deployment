@@ -1,0 +1,9 @@
+.sub_popup{
+    width: 100%;
+    max-width: 320px;
+    margin-left: auto !important;
+    right: 0;
+    top: 8%;
+    z-index: 1000;
+    transition: all 0.4s ease-in-out;
+}
