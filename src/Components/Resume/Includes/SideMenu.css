@@ -1,4 +1,4 @@
-@media all and (min-width: 1200px) {
+@media all and (min-width: 1281px) {
   .sideMenu-main {
     width: 25%;
     height: 100vh;
@@ -11,16 +11,16 @@
   bottom: 0;
   width: 20%;
   height: 100%;
-  transition: all ease-in-out 0.5s;
+  transition: all ease-in-out 0.8s;
   z-index: 4;
-  transition: all 0.5s;
   background: #040b14;
   overflow-y: auto;
 }
 .header .profile img {
   margin: 15px auto;
   display: block;
-  width: 120px;
+  width: 50%;
+  height: auto;
   border: 8px solid #2c2f3f;
 }
 .header .profile h1 {
@@ -55,7 +55,7 @@
   transition: 0.4s;
 }
 .side-nav-active {
-  color: rgb(194, 3, 3) !important;
+  color: #01b9da !important;
   font-weight: bolder !important;
 }
 .nav-menu {
@@ -101,39 +101,19 @@
 }
 
 /* Mobile Navigation */
-.mobile-nav-toggle {
-  position: fixed;
-  right: 15px;
-  top: 15px;
-  z-index: 5;
-  border: 0;
-  font-size: 24px;
-  transition: all 0.4s;
-  outline: none !important;
-  color: #fff;
-  width: 40px;
-  height: 40px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  line-height: 0;
-  border-radius: 50px;
-  cursor: pointer;
-}
-
-.mobile-nav-active {
-  overflow: hidden;
-}
 .mobile-nav-active .header {
   left: 0;
 }
 .nav-menu a:focus {
   color: #01b9da;
 }
-@media all and (max-width:1199px) {
+@media all and (max-width: 1280px) {
     .header{
         width: 100%;
         transform: translateX(-100%);
+        transition: all 0.5s ease;
+    }
+    .header .profile img {
+        width: 15%;
     }
 }
-

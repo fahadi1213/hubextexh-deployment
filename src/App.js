@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import './App.css';
 import { Switch, Route } from 'react-router';
 import HomePage from './Components/HomePage/HomePage';
@@ -13,22 +13,14 @@ import PrivacyPolicy from './Components/PrivacyPolicy/PrivacyPolicy';
 import TermsAndConditions from './Components/TermsAndConditions/TermsAndConditions';
 import ProjectsDetails from './Components/ProjectDetails/ProjectsDetails';
 import Resume from './Components/Resume/Resume';
-import Preloader from '../src/Components/UI/Preloader';
+import ErrorPage from './Components/UI/ErrorPage';
 
 
 
 function App() {
-    const [loading, setLoading] = useState(true)
-    useEffect(() => {
-        setLoading(true)
-        setTimeout(() => {
-            setLoading(false)
-        }, 10)
-    }, [])
+
     return (
         <>
-            {
-                loading ? <Preloader /> :
                     <Switch>
                         <Route exact path="/" component={HomePage}></Route>
                         <Route path="/services" ></Route>
@@ -39,10 +31,9 @@ function App() {
                         <Route exact path="/privacypolicy" component={PrivacyPolicy}></Route>
                         <Route exact path="/termsandconditions" component={TermsAndConditions}></Route>
                         <Route exact path="/projects" component={ProjectsDetails}></Route>
-                        <Route exact path="/resume" component={Resume}></Route>
+                        <Route exact path="/resume/:fullname-:dob-:uuId" children={<Resume/>}></Route>
+                        <Route component={ErrorPage}></Route>
                     </Switch>
-            }
-
         </>
     );
 }

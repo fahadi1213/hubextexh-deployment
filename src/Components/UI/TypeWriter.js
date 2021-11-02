@@ -8,7 +8,7 @@ function TypeWriter() {
     return (
         <>
             <Typed
-                strings={["Designer.", "Developer.", "Programmer.", "Freelancer."]}
+                strings={["Adaptable.", "Curious.", "Passionate.", "Problem solver.", "Quick learner."]}
                 typeSpeed={100}
                 backSpeed={50}
                 loop

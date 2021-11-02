@@ -1,22 +1,22 @@
 import React from 'react';
 import { Col, Container, Row } from "react-bootstrap";
-import pDImage1 from "../../Images/a.jpg"
-import pDImage2 from '../../Images/1.jpg';
-import pDImage3 from '../../Images/2.jpg';
-import pDImage4 from '../../Images/2.jpg';
+// import pDImage1 from "../../Images/a.jpg"
+// import pDImage2 from '../../Images/1.jpg';
+// import pDImage3 from '../../Images/2.jpg';
+// import pDImage4 from '../../Images/2.jpg';
 import "./ProjectsDetails.css"
 import ProjectDetailFooter from './ProjectDetailFooter';
 
 
 function ProjectsDetails() {
 
-    const projectsData = [
-        { imageSrc: pDImage2 },
-        { imageSrc: pDImage3 },
-    ]
-    const projectDetailsData = [
-        { pDimageSrc:pDImage4, pDName: "Client 1", pDDesc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."},
-    ]
+    // const projectsData = [
+    //     { imageSrc: pDImage2 },
+    //     { imageSrc: pDImage3 },
+    // ]
+    // const projectDetailsData = [
+    //     { pDimageSrc:pDImage4, pDName: "Client 1", pDDesc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."},
+    // ]
     return (
         <section className="pdet-section-main">
             <Container className="pDet_container">
@@ -59,7 +59,7 @@ function ProjectsDetails() {
                 </Row>
                 <Row className="p-0">
                     <Col>
-                        <img className="pdet-section-img-main" src={pDImage1} alt=""/>
+                        {/* <img className="pdet-section-img-main" src={pDImage1} alt=""/> */}
                     </Col>
                 </Row>
                 <Row className="p-0 text-start">
@@ -83,20 +83,20 @@ function ProjectsDetails() {
                 </Row>
                 <Row className="pdet-section-div-sub">
                     {
-                        projectsData.map((curr,index) =>{
-                            return (
-                                <Col className="col-12 col-xl-6 justify-content-center align-items-center" key={index}>
-                                    <img width="100%" className="pdet-section-img-sub" src={curr.imageSrc} alt="project-details"/>
-                                </Col>
-                            )
-                        })
+                        // projectsData.map((curr,index) =>{
+                        //     return (
+                        //         <Col className="col-12 col-xl-6 justify-content-center align-items-center" key={index}>
+                        //             <img width="100%" className="pdet-section-img-sub" src={curr.imageSrc} alt="project-details"/>
+                        //         </Col>
+                        //     )
+                        // })
                     }
                 </Row>
             </Container>
                 <section className="testimonial text-center navlinks-section">
                     <div className="heading white-heading">Testimonial</div>
                     <div className="carousel-inner">
-                        <div className="testimonial_slide">
+                        {/* <div className="testimonial_slide">
                             <img
                                 src={projectDetailsData[0].pDimageSrc}
                                 className="img-circle img-responsive mb-5"
@@ -110,7 +110,7 @@ function ProjectsDetails() {
                             <p>
                                 {projectDetailsData[0].pDDesc}
                             </p>
-                        </div>
+                        </div> */}
                     </div>
                 </section>
             <ProjectDetailFooter />

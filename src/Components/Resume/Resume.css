@@ -1,5 +1,5 @@
 .res-section {
-  padding: 60px 100px;
+  padding: 46px 100px;
   overflow: hidden;
 }
 @media all and (max-width: 767px) {
@@ -35,7 +35,7 @@
   margin-bottom: 0;
 }
 
-@media all and (max-width: 1199px) {
+@media all and (max-width: 1280px) {
   .section-title {
     max-width: 100%;
   }

@@ -2,7 +2,7 @@ import React, { useRef, useState} from "react";
 import { Nav } from "react-bootstrap";
 import "./SideMenu.css";
 import ResumeFooter from "./ResumeFooter";
-import placeHolder from '../../../Images/placeholder.jpg'
+import placeHolder from '../../../Assets/Images/placeholder.jpg'
 const  SideMenu = (props) => {
 
     const responseData = props.SideMenuRespData;
@@ -46,6 +46,10 @@ const  SideMenu = (props) => {
 
 
     const scrollIntoViewHandler = (id) => {
+        
+        if (window.matchMedia("(max-width: 1024px)").matches) {
+            closeSideBar();
+          }
 
         const anchor = document.getElementById(id);
         const yOffset = -500;
@@ -63,10 +67,12 @@ const  SideMenu = (props) => {
         <>
             <section className="sideMenu-main" >
                 <header className="header d-flex flex-column justify-content-between" ref={sideNavbarOverlay}>
-                <button className=" d-xl-none bg-transparent border-0" onClick={closeSideBar}><i className="fas fa-times"></i></button>
+                    <div className="res-header-btn">
+                        <button className="d-xl-none" onClick={closeSideBar}><i className="fas fa-times"></i></button>
+                    </div>
                     <div className="d-flex flex-column">
                         <div className="profile">
-                           <img src={replaceAbleImage} alt="" className="img-fluid rounded-circle w-50 h-auto" />
+                           <img src={replaceAbleImage} alt="" className="img-fluid rounded-circle" />
                             <h1 className="text-light">{responseData.name}</h1>
                         </div>
                         <nav id="side-navbar" className="nav-menu navbar sideNavbar">

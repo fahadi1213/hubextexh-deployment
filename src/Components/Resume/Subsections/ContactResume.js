@@ -1,5 +1,6 @@
 import React from 'react'
 import { Container, Row, Col } from "react-bootstrap";
+import "./ContactResume.css";
 
 function ContactResume() {
     return (
@@ -10,7 +11,10 @@ function ContactResume() {
                     <h2>Contact</h2>
                 </div>
                 <Row className="contact_style">
-                    <Col className="col-12 col-xl-4 mb-30 text-center">
+                    <div className="contact-main-heading d-flex justify-content-start">
+                        <h4>Don't hesitate to contact us.</h4>
+                    </div>
+                    <Col className="col-12 col-xl-6 col-md-6 text-center">
                         <div className="single-cta">
                             <div className="cta-text p-0">
                                 <div className="footer-contact-heading">
@@ -33,7 +37,7 @@ function ContactResume() {
                             </div>
                         </div>
                     </Col>
-                    <Col className="col-12 col-xl-4 col-md-6 mb-30 text-center">
+                    <Col className="col-12 col-xl-6 col-md-6 text-center">
                         <div className="single-cta">
                             <div className="cta-text p-0">
                                 <div className="footer-contact-heading">
@@ -56,13 +60,13 @@ function ContactResume() {
                             </div>
                         </div>
                     </Col>
-                    <Col className="col-12 col-xl-4 col-md-6 mb-30 text-center">
+                    <Col className="col-12 col-xl-6 col-md-6 text-center">
                         <div className="single-cta">
                             <div className="cta-text p-0">
                                 <div className="footer-contact-heading">
                                     <h3>Mail Us</h3>
                                 </div>
-                                <ul className="p-0 footer_section_a">
+                                <ul className="footer_section_a text-start p-0">
                                     <li>
                                         <a href="mailto:sales@hubextech.com">
                                             <i className="fas fa-envelope me-2"></i>
@@ -70,6 +74,23 @@ function ContactResume() {
                                         </a>
                                     </li>
                                 </ul>
+                            </div>
+                        </div>
+                    </Col>
+                    <Col className="col-12 col-xl-6 col-md-6 text-center">
+                        <div className="single-cta">
+                            <div className="cta-text p-0">
+                                <div className="footer-contact-heading">
+                                    <h3>Connect with Us</h3>
+                                </div>
+                                <div className="icons-media">
+                                    <a href="https://twitter.com/HubexT">
+                                        <i className="fab fa-twitter"></i>
+                                    </a>
+                                    <a href="https://www.linkedin.com/company/hubex-tech/">
+                                        <i className="fab fa-linkedin-in"></i>
+                                    </a>
+                                </div>
                             </div>
                         </div>
                     </Col>

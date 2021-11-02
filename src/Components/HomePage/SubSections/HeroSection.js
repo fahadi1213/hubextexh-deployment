@@ -1,7 +1,7 @@
 import React from 'react'
 import MainNavbar from '../../Includes/MainNavbar';
 import './HeroSection.css'
-import HsVector from '../../../Images/background image.png'
+import HsVector from '../../../Assets/Images/background-hsVector.png'
 import { Container, Row, Col } from 'react-bootstrap';
 
 const HeroSection = () => {
@@ -27,7 +27,7 @@ const HeroSection = () => {
                                 </p>
                             </div>
                             <div className="mt-4 hero-section-btns">
-                                <button className="text-uppercase me-2 my-2 btn-mau">More about us</button>
+                                <button className="text-uppercase me-2 my-2 btn-mau" onClick={() => scrollIntoViewHandler('costNav-main')}>Request a demo</button>
                                 <button className="text-uppercase me-2 my-2 btn-sow" onClick={() => scrollIntoViewHandler('projNav-main')}>See our Work</button>
                             </div>
                         </Col>

@@ -3,7 +3,7 @@
   position: relative;
 }
 .contact-section-bg {
-  background-image: url(../Images/contact-bg1.jpg);
+  background-image: url(../../../Assets/Images/contact-bg1.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: bottom;
@@ -52,7 +52,7 @@
   font-size: 15px;
 }
 .res-contact-address {
-    max-width: 320px;
+    max-width: 300px;
   }
 @media all and (min-width: 992px) {
   .contact-section-bg {

@@ -1,3 +1,37 @@
-.contact-resp-main{
-    margin-bottom: 79px;
+.contact-main-heading h4 {
+  font-size: 18px;
+  color: #393939;
+  margin-bottom: 40px;
+  position: relative;
+}
+.icons-media {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.icons-media a {
+  height: 40px;
+  width: 40px;
+  margin: 0 8px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 40px;
+  color: #fff !important;
+  font-size: 17px;
+  text-decoration: none;
+  transition: all 0.4s ease;
+}
+.icons-media a:nth-child(1) {
+  background: #1da1f2;
+}
+.icons-media a:nth-child(1):hover {
+  color: #1da1f2 !important;
+  background: #fff;
+}
+.icons-media a:nth-child(2) {
+  background: #0077b5;
+}
+.icons-media a:nth-child(2):hover {
+  color: #0077b5 !important;
+  background: #fff;
 }

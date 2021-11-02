@@ -1,16 +1,15 @@
-import React, { useEffect, useState, useRef } from "react";
+import React, { useEffect, useState } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import './Projects.css';
 import ProjectItem from "./ProjectItem";
 import Slider from "react-slick";
 import axios from "axios";
 //Dummy Project Image
-import dummyImage from '../../../Images/dummy.jpg'
+import dummyImage from '../../../Assets/Images/dummy.jpg'
 
 
-const Projects = (props) => {
-    const [pimages, setPimages] = useState(null)
-
+const Projects = () => {
+    const [pimages, setPimages] = useState(null);
     //Project API ----------start-------------
 
     // API Response Data
@@ -37,7 +36,7 @@ const Projects = (props) => {
 
 
     const projDataHandler = async () => {
-        const baseURL = 'https://b212-72-255-21-77.ngrok.io/api/v1/projects';
+        const baseURL = 'https://0d76-72-255-21-77.ngrok.io/api/v1/projects';
         const response = await axios.get(baseURL, {
             headers: {
                 "Authorization": process.env.REACT_APP_AUTH_KEY
@@ -84,45 +83,48 @@ const Projects = (props) => {
     let count = 0;
     let check = true
 
-    const onWheelHandler = () => {
-        window.addEventListener('wheel', (event) => {
-            if (event.deltaY < 0) {
-                check = false;
 
-            } else if (event.deltaY > 0) {
-                check = true;
-            }
-        });
+    window.addEventListener('wheel', (event) => {
+        if (event.deltaY < 0) {
+            check = false;
+
+        } else if (event.deltaY > 0) {
+            check = true;
+        }
+    });
+    window.addEventListener('scroll', () =>{
+        if(window.pageYOffset <= 0){
+            resetCount();
+        }
+
+    })
+
+    const resetCount = () =>{
+        if(window.pageYOffset <= 0){
+
+            Array.from(pimages).map(curr =>{
+                return curr.style.transform = 'translateX(120%)';
+            })
+            count = 0;
+            return
+        }
+        count = 6
     }
 
     const ImageTransportHandler = () => {
-        onWheelHandler();
         if (check === true && count !== pimages.length) {
             pimages[count++].style.transform = 'translateX(0%)';
-        }
-        else if (check === false && count !== 0) {
-            if (count === pimages.length) {
-                count = count - 1
-                return;
-            }
-            pimages[count--].style.transform = 'translateX(120%)';
+            console.log(count)
         }
 
     }
-    //Images Translating Handlers-----end
 
-
-    //1. The following Function is just reseting the images to their required places.
-    //2. We are doing this, because when a user scroll imediatly to the bottom of webpage/
-    // causes images not rendered or their required places just because of urgent scrolling issue
-    const resetImages = (transValue) =>{
-            Array.from(pimages).map(curr =>{
-                curr.style.transform = `translateX(${transValue}%)`
-            })
+    const ImageResetTransport = () => {
+        count === 0 && resetCount();
+        if (check === false) {
+            pimages[--count].style.transform = 'translateX(120%)';
         }
-        props.CostVisibility && resetImages(120)
-
-
+    }
 
     return (
         <>
@@ -136,7 +138,7 @@ const Projects = (props) => {
                                 <p className="fs-5 ourProj-heading text-secondary">From Concept to Creation.</p>
                                 <ul className="w-100">
                                     {projData.map((curr, index) => {
-                                        return <ProjectItem key={index} title={curr.title} ProjDesc={curr.description} Techs={curr.technologies} ProjImage={curr.images[0]} webLink={curr.weblink} ImageHandler={ImageTransportHandler} />
+                                        return <ProjectItem key={index} title={curr.title} ProjDesc={curr.description} Techs={curr.technologies} ProjImage={curr.images[0]} webLink={curr.weblink} ImageHandler={ImageTransportHandler} ResetImageHandler={ImageResetTransport} />
                                     })}
                                 </ul>
                             </Container>
@@ -162,7 +164,7 @@ const Projects = (props) => {
                     <Slider {...settings}>
                         {
                             projData.map((curr, index) => {
-                                return <ProjectItem key={index} title={curr.title} ProjDesc={curr.description} Techs={curr.technologies} ProjImage={curr.images[0]} webLink={curr.weblink} />
+                                return <ProjectItem key={index} title={curr.title} ProjDesc={curr.description} Techs={curr.technologies} ProjImage={curr.images[0]} webLink={curr.weblink} ImageHandler={ImageTransportHandler} ResetImageHandler={ImageResetTransport} />
                             })
                         }
                     </Slider>

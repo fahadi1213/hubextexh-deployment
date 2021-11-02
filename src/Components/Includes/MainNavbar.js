@@ -1,6 +1,6 @@
 import React, { useRef, useState } from "react";
 import { Navbar, Nav, Container } from "react-bootstrap";
-import HubexLogo from '../../Images/logo.png'
+import HubexLogo from '../../Assets/Images/logo.png'
 import EButton from '../UI/Button';
 //Custom Stylesheet
 import './MainNavbar.css';

@@ -19,11 +19,10 @@ function ResumeHeroSection(props) {
         <>
             <div className="w-100">
                 <section id="resume-home" className="resume_main d-flex flex-column align-items-center justify-content-center res-section side-nav-links-section">
-                    <header className="d-flex flex-column align-items-end">
-                        
-                        <button onClick={openSideBarHandler} className="d-xl-none bars-btn">
-                            <i className="fas fa-bars d-xl-none"></i>
-                        </button>
+                    <header className="res-header-btn">
+                            <button onClick={openSideBarHandler} className="d-xl-none bars-btn">
+                                <i className="fas fa-bars d-xl-none"></i>
+                            </button>
                     </header>
                     <Container className="resume-cont">
                         <Row>

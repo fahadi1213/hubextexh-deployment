@@ -1,6 +1,6 @@
 import React from "react";
 import { Col, Container, Row } from "react-bootstrap";
-import footerLogo from "../../Images/hubex2-white.png"
+import footerLogo from "../../Assets/Images/hubex2-white.png"
 import "./ProjectDetailFooter.css";
 
 function ProjectDetailFooter() {

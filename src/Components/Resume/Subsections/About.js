@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 
 import "./About.css";
-import placeHolder from '../../../Images/placeholder.jpg'
+import placeHolder from '../../../Assets/Images/placeholder.jpg'
 
 function About(props) {
 

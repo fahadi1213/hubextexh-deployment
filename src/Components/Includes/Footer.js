@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Container, Row, Col, Nav } from "react-bootstrap";
-import logo from "../../Images/hubex2-white.png";
+import logo from "../../Assets/Images/hubex2-white.png";
 import "./Footer.css";
 import axios from "axios";
 import swal from "sweetalert";

@@ -3,9 +3,9 @@ import './Services.css'
 import { Container, Row} from 'react-bootstrap';
 // Images
 
-import mobDev from '../../../Images/Mobile-development-pana.png'
-import webDev from '../../../Images/Developer-activity-pana.png'
-import softDev from '../../../Images/Programming-pana.png'
+import mobDev from '../../../Assets/Images/Mobile-development-pana.png'
+import webDev from '../../../Assets/Images/Developer-activity-pana.png'
+import softDev from '../../../Assets/Images/Programming-pana.png'
 import FlipCard from '../../UI/FlipCard';
 import ServicesResp from './ServicesResp';
 

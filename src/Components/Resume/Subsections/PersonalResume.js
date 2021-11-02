@@ -23,10 +23,6 @@ function PersonalResume(props) {
                         <div className="resume-item">
                             <h4>{prRespData.name}</h4>
                             <p>{prRespData.details}</p>
-                            <ul>
-                                <li>{prRespData.phone_number}</li>
-                                <li>{prRespData.email}</li>
-                            </ul>
                         </div>
                     </Col>
                     <Col>

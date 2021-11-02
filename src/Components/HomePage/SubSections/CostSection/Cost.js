@@ -7,7 +7,6 @@ import ContactFrom from './ContactForm'
 import ContactForm from "./ContactForm";
 import axios from "axios";
 import swal from 'sweetalert';
-import { VisibilityObserver } from "reactjs-visibility";
 
 
 const Cost = (props) => {
@@ -21,10 +20,6 @@ const Cost = (props) => {
         middle: 10,
         senior: 12
     }
-    //Prices States
-    // const [spPrice, setSpPrice] = useState(costPrices.frontend);
-    // const [clPrice, setClPrice] = useState(costPrices.middle);
-    // const [epPrice, setEpPrice] = useState(2);
 
 
     //Animation Operation of Cost Section
@@ -212,14 +207,8 @@ const Cost = (props) => {
     animateValue(tpTag, initialCostPrice, totalCalPrice)
 
 
-    //Visibility Checker of the component
-    const onChangeHandler = (isVisible) => {
-        isVisible ? props.VisibilityHandler():props.VisibilityResetHandlerCost()
-    }
-
     return (
         <>
-        <VisibilityObserver onChangeVisibility={onChangeHandler}>
             <div className="cost-main_cont navlinks-section" id="costNav-main">
                 <div className="">
                     <Row className="mx-0">
@@ -289,7 +278,6 @@ const Cost = (props) => {
                     </Row>
                 </div>
             </div>
-            </VisibilityObserver>
         </>
     );
 }
